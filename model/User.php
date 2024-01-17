@@ -18,6 +18,19 @@ class User
   {
     try {
       $conn = Connection::connecting();
+      $sql = $conn->prepare("INSERT INTO tabelausuario(nomeUsuario,:email,:dtaNasc, paisNasc, numTel, cpf, senha, sexo) VALUES (:nomeUsuario,:email,:dataNasc,:paisUsuario,:numeroCelular,:cpf,:senha,:sexo)");
+
+      $sql->bind_param("nomeUsuario", $this->nomeUsuario);
+      $sql->bind_param("email", $this->email);
+      $sql->bind_param("dataNasc", $this->dtaNasc);
+      $sql->bind_param("paisUsuario", $this->paisNasc);
+      $sql->bind_param("numeroCelular", $this->numTel);
+      $sql->bind_param("cpf", $this->cpf);
+      $sql->bind_param("senha", $this->senha);
+      $sql->bind_param("sexo", $this->sexo);
+
+      $sql->execute();
+
     } catch (PDOException $e) {
       echo 'Connection failed!' . $e->getMessage();
     }
