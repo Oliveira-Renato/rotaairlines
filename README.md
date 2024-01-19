@@ -1,7 +1,9 @@
 # RotaAirlines ✈️ - Plataforma de Cadastro e Agendamento de Voos (Projeto de Aprendizado em PHP)
 
 ## :test_tube: Tecnologias 
+
 Esse projeto foi desenvolvido com as seguintes tecnologias:
+
 * PHP
 * CSS
 
