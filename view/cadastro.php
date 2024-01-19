@@ -60,7 +60,7 @@
     <div class="card-header">
 
       <!--Cadastro Sucesso-->
-      <form type="submit" method="post" action="">
+      <form type="submit" method="post" action="REGISTER">
         <div class="form-group">
 
           <!-- PAIS -->
